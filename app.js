@@ -66,7 +66,7 @@ app.use("*", (req, res, next) => {
 
 app.use(handlerError);
 
-const PORT = 5000;
-app.listen(process.env.PORT | PORT, function () {
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, function () {
   console.log(`Back-end api is running at http://localhost:${PORT}`);
 });

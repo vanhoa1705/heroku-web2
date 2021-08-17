@@ -1,0 +1,30 @@
+{
+    "create": {
+        "required": [
+            "title",
+            "url_video",
+            "content"
+        ],
+        "additionalProperties": true,
+        "properties": {
+            "academy_id": { "type": "integer" },
+            "title": { "type": "string", "minLength": 10 },
+            "content": { "type": "string", "minLength": 10 },
+            "url_video": { "type": "string" }
+        }
+    },
+  
+    "update": {
+        "required": [
+            
+        ],
+        "additionalProperties": true,
+        "properties": {
+            "academy_id": { "type": "integer" },
+            "title": { "type": "string", "minLength": 10 },
+            "content": { "type": "string", "minLength": 10 },
+            "url_video": { "type": "string" }
+        }
+    
+    }
+}

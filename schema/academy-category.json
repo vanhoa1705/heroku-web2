@@ -1,0 +1,40 @@
+{
+  "getAll": {
+    "required": [
+      "page",
+      "limit"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "page": { "type": "integer" },
+      "limit": { "type": "integer" }
+    }
+  },
+
+  "create": {
+    "required": [
+      "academy_category_name",
+      "created_by",
+      "created_at"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "academy_category_name": {
+        "type": "string"
+      },
+      "created_by": { "type": "integer" },
+      "created_at": { "type": "integer" }
+    }
+  },
+
+  "update": {
+    "additionalProperties": false,
+    "properties": {
+      "academy_category_name": {
+        "type": "string"
+      },
+      "updated_by": { "type": "integer" }
+    }
+  }
+  
+}

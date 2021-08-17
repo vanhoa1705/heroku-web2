@@ -1,0 +1,101 @@
+{
+  "changPassword": {
+    "type": "object",
+    "required": ["oldPassword", "newPassword", "rePassword"],
+    "additionalProperties": false,
+    "properties": {
+      "oldPassword": {
+        "type": "string"
+      },
+      "newPassword": {
+        "type": "string",
+        "minLength": 6
+      },
+      "rePassword": {
+        "type": "string"
+      }
+    }
+  },
+  "register": {
+    "type": "object",
+    "required": [
+      "username",
+      "password",
+      "email",
+      "name",
+      "phone_number",
+      "birthday",
+      "gender"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "username": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string",
+        "minLength": 6
+      },
+      "email": {
+        "type": "string",
+        "format": "email"
+      },
+      "name": {
+        "type": "string"
+      },
+      "phone_number": {
+        "type": "string"
+      },
+      "birthday": {
+        "type": "string",
+        "format": "date"
+      },
+      "gender": {
+        "type": "string",
+        "enum": ["Nam", "Nữ"]
+      }
+    }
+  },
+  "updateProfile": {
+    "type": "object",
+    "required": ["name", "email"],
+    "additionalProperties": false,
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string",
+        "format": "email"
+      }
+    }
+  },
+  "rate": {
+    "type": "object",
+    "required": ["academy_id", "point", "comment"],
+    "additionalProperties": false,
+    "properties": {
+      "academy_id": {
+        "type": "string"
+      },
+      "point": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+      },
+      "comment": {
+        "type": "string"
+      }
+    }
+  },
+  "registerAcademy": {
+    "type": "object",
+    "required": ["listAcademy"],
+    "additionalProperties": false,
+    "properties": {
+      "listAcademy": {
+        "type": "array"
+      }
+    }
+  }
+}

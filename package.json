@@ -1,0 +1,37 @@
+{
+  "name": "final-project-backend",
+  "version": "1.0.0",
+  "description": "WNC - Final Project - Online Academy &amp; Chatbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WNC-HCMUS-2021/Final-Project-Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WNC-HCMUS-2021/Final-Project-Backend/issues"
+  },
+  "homepage": "https://github.com/WNC-HCMUS-2021/Final-Project-Backend#readme",
+  "dependencies": {
+    "ajv": "^6.12.6",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.6",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.7",
+    "randomstring": "^1.2.1",
+    "request": "^2.88.2"
+  }
+}

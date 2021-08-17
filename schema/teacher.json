@@ -1,0 +1,74 @@
+{
+  "create": {
+    "type": "object",
+    "required": [
+      "username",
+      "password",
+      "email",
+      "name",
+      "phone_number",
+      "birthday",
+      "gender"
+    ],
+    "additionalProperties": true,
+    "properties": {
+      "username": { "type": "string" },
+      "password": {
+        "type": "string",
+        "minLength": 6
+      },
+      "email": {
+        "type": "string",
+        "format": "email"
+      },
+      "name": { "type": "string" },
+      "phone_number": { "type": "string" },
+      "birthday": {
+        "type": "string",
+        "format": "date"
+      },
+      "gender": {
+        "type": "string",
+        "enum": ["Nam", "Nữ"]
+      }
+    }
+  },
+
+  "update": {
+    "required": [
+      "user_id"
+    ],
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "user_id": { "type": "integer" },
+      "name": { "type": "string" },
+      "phone_number": { "type": "string" },
+      "birthday": {
+        "type": "string",
+        "format": "date"
+      },
+      "gender": {
+        "type": "string",
+        "enum": ["Nam", "Nữ"]
+      }
+    }
+  },
+
+  "changePW": {
+    "required": [
+      "user_id",
+      "password",
+      "confirm_password"
+    ],
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+      "user_id": { "type": "integer" },
+      "password": { "type": "string", "minLength": 6 },
+      "confirm_password": { "type": "string", "minLength": 6 }
+    }
+  }
+    
+}
+  

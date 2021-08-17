@@ -1,0 +1,38 @@
+{
+    "create": {
+        "required": [
+            "academy_category_id",
+            "academy_name",
+            "price",
+            "teacher_id",
+            "description_short",
+            "created_at"
+        ],
+        "additionalProperties": true,
+        "properties": {
+            "academy_category_id": { "type": "integer" },
+            "academy_name": { "type": "string" },
+            "price": { "type": "number" },
+            "teacher_id": { "type": "integer" },
+            "description_short": { "type": "string", "minLength": 10 },
+            "created_at": { "type": "integer" }
+        }
+    },
+  
+    "update": {
+        "required": [
+            "teacher_id"
+        ],
+        "additionalProperties": true,
+        "properties": {
+            "academy_id": { "type": "integer" },
+            "academy_category_id": { "type": "integer" },
+            "academy_name": { "type": "string" },
+            "price": { "type": "number" },
+            "teacher_id": { "type": "integer" },
+            "description_short": { "type": "string" },
+            "created_at": { "type": "integer" }
+        }
+    }
+    
+  }
